@@ -1,0 +1,11 @@
+services:
+  palworld:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: palworld
+    hostname: palworld
+    network_mode: "host"
+    restart: unless-stopped
+    volumes:
+      - ./saves:/home/steam/Steam/steamapps/common/PalServer/Pal/Saved/
